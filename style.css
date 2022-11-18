@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,700;1,300&display=swap");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(45deg, black, grey);
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+h1,
+h3,
+footer {
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+
+footer {
+  flex-shrink: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+main > .calculator {
+  display: grid;
+  justify-content: right;
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: minmax(80px, auto) repeat(6, 90px);
+}
+
+.calculator > button {
+  border-radius: 40px;
+  padding: 2px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calculator > .numbers {
+  font-size: 1.8rem;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.calculator > .function {
+  background-color: grey;
+  color: white;
+  border: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.calculator > .equals {
+  background-color: grey;
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+
+.calculator > .operadores {
+  background-color: chocolate;
+  border: none;
+  color: white;
+}
+
+.calculator > .two-btn {
+  grid-column: span 2;
+}
+
+.calculator > .visor {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-right: 10px;
+  color: black;
+  word-wrap: break-word;
+  word-break: break-all;
+  background-color: white;
+  font-size: 30px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.localStorage {
+  display: grid;
+  padding: 30px;
+  grid-template-columns: repeat(1, 120px);
+  grid-template-rows: minmax(80px, auto) repeat(6, 90px);
+}
+
+.localStorage > .menory {
+  grid-row: 1/5;
+  justify-content: left;
+  padding: 30px;
+  color: black;
+  background-color: rgba(120, 120, 120, 0.8);
+  font-size: 25px;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 5px;
+  color: white;
+  font-weight: bold;
+}
